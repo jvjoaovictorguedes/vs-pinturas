@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CtaBand from "@/components/sections/CtaBand";
 import Diferenciais from "@/components/sections/Diferenciais";
+import ServicosRealizados from "@/components/sections/ServicosRealizados";
 
 export const metadata: Metadata = {
   title: "Sobre | VS Pinturas",
@@ -10,8 +11,8 @@ export const metadata: Metadata = {
 export default function SobrePage() {
   return (
     <>
-      <header className="relative flex min-h-[50svh] flex-col justify-end overflow-hidden bg-ink px-5 pb-16 pt-32 text-white sm:px-10">
-        <div className="mx-auto w-full max-w-[1180px]">
+      <header className="relative flex min-h-[50svh] flex-col justify-end overflow-hidden bg-ink px-5 pb-16 pt-32 text-white sm:px-10 dark:text-paper dark:bg-ink-soft">
+        <div className="mx-auto w-full max-w-295">
           <div className="eyebrow mb-6">Sobre a VS Pinturas</div>
           <h1 className="max-w-[20ch] text-[34px] font-normal sm:text-[48px]">
             Pintura e reforma feitas por quem entende de detalhe
@@ -20,22 +21,32 @@ export default function SobrePage() {
       </header>
 
       <section className="bg-paper px-5 py-20 sm:px-10">
-        <div className="mx-auto max-w-[760px]">
-          {/* TODO: substitua pelo texto real de história/posicionamento da VS Pinturas */}
-          <p className="text-lg font-light leading-relaxed text-ink-soft">
-            A VS Pinturas nasceu da vontade de fazer o trabalho de reforma e
-            pintura do jeito que o cliente merece: com prazo cumprido,
-            comunicação clara e um acabamento que realmente impressiona.
-          </p>
-          <p className="mt-6 text-lg font-light leading-relaxed text-ink-soft">
-            Atuamos em residências e comércios, do reparo pontual à reforma
-            completa, sempre com a mesma atenção ao detalhe que faz a
-            diferença entre um serviço comum e um trabalho bem feito.
-          </p>
+        <div className="mx-auto max-w-190">
+          <div className="flex flex-col gap-8 md:flex-row md:items-center">
+            <img
+              src="/logo.jpg"
+              alt="Equipe da VS Pinturas"
+              className="h-60 w-60 shrink-0 rounded-lg object-cover"
+            />
+            <div className="flex-1">
+              <p className="text-lg font-light leading-relaxed text-ink-soft">
+                A VS Pinturas nasceu da vontade de fazer o trabalho de reforma e
+                pintura do jeito que o cliente merece: com prazo cumprido,
+                comunicação clara e um acabamento que realmente impressiona.
+              </p>
+              <p className="mt-6 text-lg font-light leading-relaxed text-ink-soft">
+                Atuamos em residências e comércios, do reparo pontual à reforma
+                completa, sempre com a mesma atenção ao detalhe que faz a
+                diferença entre um serviço comum e um trabalho bem feito.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <Diferenciais />
+
+      <ServicosRealizados />
       <CtaBand />
     </>
   );

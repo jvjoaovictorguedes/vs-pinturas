@@ -5,7 +5,7 @@ import { site, whatsappLink } from "@/content/site";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-ink text-white">
+    <footer className="relative overflow-hidden bg-ink text-white dark:bg-ink-soft">
       <div className="mx-auto grid w-full max-w-[1180px] gap-12 px-5 py-16 sm:px-10 lg:grid-cols-[1.2fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
@@ -16,17 +16,19 @@ export default function Footer() {
               height={44}
               className="h-11 w-11 rounded-lg object-cover"
             />
-            <span className="font-display text-lg">{site.nome}</span>
+            <span className="font-display text-lg dark:text-paper">
+              {site.nome}
+            </span>
           </div>
-          <p className="mt-5 max-w-[32ch] text-sm font-light text-white/60">
-            Reformas, pinturas e manutenções com acabamento de quem entende
-            que a primeira impressão é sempre visual.
+          <p className="mt-5 max-w-[32ch] text-sm font-light text-white/60 dark:text-paper/60">
+            Reformas, pinturas e manutenções com acabamento de quem entende que
+            a primeira impressão é sempre visual.
           </p>
         </div>
 
         <div>
           <div className="eyebrow on-dark mb-5 !text-brand-red">Contato</div>
-          <ul className="space-y-3 text-sm text-white/70">
+          <ul className="space-y-3 text-sm text-white/70 dark:text-paper/70">
             <li>
               <Link
                 href={whatsappLink()}
@@ -55,7 +57,7 @@ export default function Footer() {
 
         <div>
           <div className="eyebrow on-dark mb-5 !text-brand-red">Navegação</div>
-          <ul className="space-y-3 text-sm text-white/70">
+          <ul className="space-y-3 text-sm text-white/70 dark:text-paper/70">
             <li>
               <Link href="/" className="transition-colors hover:text-brand-red">
                 Início
@@ -81,7 +83,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 px-5 py-6 text-center text-[11px] uppercase tracking-[0.16em] text-white/40 sm:px-10">
+      <div className="border-t border-white/10 px-5 py-6 text-center text-[11px] uppercase tracking-[0.16em] text-white/40 sm:px-10 dark:text-paper/40">
         © {new Date().getFullYear()} {site.nome} · Reformas · Pinturas ·
         Manutenções
       </div>

@@ -1,45 +1,81 @@
+export type ServicoItem = {
+  titulo: string;
+};
+
 export type Servico = {
   slug: string;
   titulo: string;
   descricao: string;
+  itens: ServicoItem[];
 };
 
-// TODO: ajuste os textos com o mix real de serviços da VS Pinturas.
 export const servicos: Servico[] = [
   {
-    slug: "pintura-residencial",
-    titulo: "Pintura Residencial",
+    slug: "telhados-e-coberturas",
+    titulo: "Telhados e Coberturas",
     descricao:
-      "Interna, externa e detalhes de acabamento. Preparo correto de superfície pra tinta durar e não descascar.",
+      "Manutenção, recuperação e proteção de telhados para manter sua cobertura segura e em boas condições.",
+    itens: [
+      { titulo: "Manutenção e reforma de telhados" },
+      { titulo: "Vedação e impermeabilização de telhados" },
+      { titulo: "Reparos e recuperação de telhas" },
+      { titulo: "Limpeza e manutenção de calhas" },
+    ],
   },
   {
-    slug: "pintura-comercial",
-    titulo: "Pintura Comercial",
+    slug: "limpeza-e-manutencao",
+    titulo: "Limpeza e Manutenção",
     descricao:
-      "Lojas, fachadas e ambientes corporativos, com planejamento pra não parar sua operação.",
+      "Serviços de limpeza e conservação para diferentes áreas, estruturas e equipamentos do imóvel.",
+    itens: [
+      { titulo: "Limpeza de caixa d'água" },
+      { titulo: "Limpeza e reforma de caixa de gordura" },
+      { titulo: "Lavagem de placas solares" },
+      { titulo: "Hidrojateamento e lavagem de superfícies" },
+    ],
   },
   {
-    slug: "reformas",
-    titulo: "Reformas",
+    slug: "pintura",
+    titulo: "Pintura",
     descricao:
-      "Da alvenaria ao acabamento final. Cuidamos do projeto do início ao fim, sem dor de cabeça pra você.",
+      "Pintura residencial, predial e comercial, do preparo da superfície ao acabamento final.",
+    itens: [
+      { titulo: "Pintura residencial" },
+      { titulo: "Pintura predial e comercial" },
+      { titulo: "Pintura interna e externa" },
+      { titulo: "Pintura de fachadas" },
+      { titulo: "Pintura de muros e grades" },
+      { titulo: "Pintura de portões e estruturas metálicas" },
+    ],
   },
   {
-    slug: "manutencoes",
-    titulo: "Manutenções",
+    slug: "acabamentos-decorativos",
+    titulo: "Acabamentos Decorativos",
     descricao:
-      "Reparos pontuais, retoques e manutenção preventiva pra manter o imóvel sempre em dia.",
+      "Técnicas e acabamentos para transformar paredes e criar ambientes com mais personalidade.",
+    itens: [
+      { titulo: "Texturas e revestimentos decorativos" },
+      { titulo: "Cimento queimado" },
+      { titulo: "Efeito perolado" },
+      { titulo: "Efeitos decorativos em geral" },
+    ],
   },
   {
-    slug: "textura-e-grafiato",
-    titulo: "Textura e Grafiato",
+    slug: "paredes-e-superficies",
+    titulo: "Paredes e Superfícies",
     descricao:
-      "Acabamentos texturizados que dão personalidade e resistência extra às paredes.",
+      "Preparação, recuperação e acabamento de paredes, fachadas e superfícies.",
+    itens: [
+      { titulo: "Aplicação e recuperação de pedras naturais" },
+      { titulo: "Amaciamento e preparação de paredes" },
+      { titulo: "Reparos em paredes e fachadas" },
+    ],
   },
   {
     slug: "impermeabilizacao",
     titulo: "Impermeabilização",
     descricao:
-      "Proteção contra infiltração em lajes, muros e áreas externas antes que o problema apareça.",
+      "Proteção contra infiltrações e umidade para preservar superfícies e estruturas.",
+    itens: [{ titulo: "Impermeabilização" }],
   },
 ];

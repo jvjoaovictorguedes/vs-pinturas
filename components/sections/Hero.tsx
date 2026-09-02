@@ -25,12 +25,13 @@ export default function Hero() {
       className="
         relative
         flex
-        min-h-svh
+        min-h-155
         flex-col
         justify-end
         overflow-hidden
         bg-ink
         text-white
+        sm:min-h-svh
       "
     >
       <img
@@ -38,14 +39,15 @@ export default function Hero() {
         alt=""
         aria-hidden="true"
         className="
-    absolute
-    inset-0
-    h-full
-    w-full
-    object-contain
-    object-center
-    dark:hidden
-  "
+          absolute
+          inset-0
+          h-full
+          w-full
+          scale-[1.08]
+          object-cover
+          object-center
+          dark:hidden
+        "
       />
 
       <img
@@ -53,26 +55,23 @@ export default function Hero() {
         alt=""
         aria-hidden="true"
         className="
-    absolute
-    inset-0
-    hidden
-    h-full
-    w-full
-    object-cover
-    object-center
-    dark:block
-  "
+          absolute
+          inset-0
+          hidden
+          h-full
+          w-full
+          scale-[1.08]
+          object-cover
+          object-center
+          dark:block
+        "
       />
-
-      {/* =========================================
-          OVERLAY
-          ========================================= */}
       <div
         aria-hidden="true"
         className="
           absolute
           inset-0
-          bg-gradient-to-r
+          bg-linear-to-r
           from-black/75
           via-black/40
           to-black/10
@@ -84,26 +83,25 @@ export default function Hero() {
         className="
           absolute
           inset-0
-          bg-gradient-to-t
+          bg-linear-to-t
           from-black/70
           via-transparent
           to-black/20
         "
       />
 
-      {/* =========================================
-          CONTEÚDO
-          ========================================= */}
       <div
         className="
           relative
           z-10
           mx-auto
           w-full
-          max-w-[1180px]
-          px-5
-          pb-24
+          max-w-295
+          px-4
+          pb-16
+          pt-20
           sm:px-10
+          sm:pb-24
         "
       >
         <div className="eyebrow mb-6">Reformas · Pinturas · Manutenções</div>
@@ -112,7 +110,7 @@ export default function Hero() {
           className="
             max-w-[16ch]
             overflow-hidden
-            text-[38px]
+            text-[32px]
             leading-[1.05]
             font-normal
             sm:text-[56px]
@@ -144,21 +142,22 @@ export default function Hero() {
           </span>
         </h1>
 
-        <div className="mt-10 flex flex-wrap items-end justify-between gap-10">
-          <p className="max-w-[36ch] text-[15px] font-light text-white/65">
+        <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between sm:gap-10">
+          <p className="max-w-[36ch] text-[14px] font-light leading-relaxed text-white/65 sm:text-[15px]">
             Pintura, reforma e manutenção com planejamento, prazo cumprido e
             aquele detalhe final que faz toda a diferença.
           </p>
 
-          <Button href={whatsappLink()} variant="red">
+          <Button
+            href={whatsappLink()}
+            variant="red"
+            className="w-full justify-center sm:w-auto"
+          >
             Solicitar orçamento
           </Button>
         </div>
       </div>
 
-      {/* =========================================
-          SCROLL INDICATOR
-          ========================================= */}
       <div
         className={`
           absolute
@@ -186,7 +185,7 @@ export default function Hero() {
       >
         <span>Role</span>
 
-        <div className="h-8 w-px bg-gradient-to-b from-white/50 to-transparent motion-safe:animate-pulse" />
+        <div className="h-8 w-px bg-linear-to-b from-white/50 to-transparent motion-safe:animate-pulse" />
       </div>
     </header>
   );

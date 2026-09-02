@@ -113,10 +113,6 @@ h3 {
   }
 }
 
-/* ============================================
-   TEXTURAS — remetem a pintura/grafiado
-   ============================================ */
-
 /* faixa diagonal estilo "rolo de tinta", uso decorativo em baixa opacidade */
 .texture-roller {
   background-image: repeating-linear-gradient(

@@ -18,11 +18,6 @@ export default function CtaBand() {
     const animate = (time: number) => {
       const elapsed = time - start;
 
-      /*
-       * Movimento extremamente lento.
-       * A textura parece viva sem chamar mais
-       * atenção do que o CTA.
-       */
       const progress = (elapsed % 14000) / 14000;
 
       const x = -20 + progress * 140;
@@ -57,10 +52,6 @@ export default function CtaBand() {
         sm:py-24
       "
     >
-      {/* =========================================
-          TEXTURA DE PAREDE / GRAFIATO
-          ========================================= */}
-
       <div
         aria-hidden="true"
         className="
@@ -86,17 +77,13 @@ export default function CtaBand() {
         }}
       />
 
-      {/* =========================================
-          GRANDE ÁREA DE ACABAMENTO
-          ========================================= */}
-
       <div
         ref={textureRef}
         aria-hidden="true"
         className="
           pointer-events-none
           absolute
-          -left-[30%]
+          left-[-30%]
           top-[-80%]
           h-[260%]
           w-[42%]
@@ -119,10 +106,6 @@ export default function CtaBand() {
           boxShadow: "0 0 80px rgba(255,255,255,0.08)",
         }}
       />
-
-      {/* =========================================
-          TEXTURA PROFUNDA
-          ========================================= */}
 
       <div
         aria-hidden="true"
@@ -147,10 +130,6 @@ export default function CtaBand() {
         }}
       />
 
-      {/* =========================================
-          ILUMINAÇÃO
-          ========================================= */}
-
       <div
         aria-hidden="true"
         className="
@@ -158,10 +137,10 @@ export default function CtaBand() {
           absolute
           -right-32
           -top-40
-          h-[420px]
-          w-[420px]
+          h-105
+          w-105
           rounded-full
-          bg-white/[0.08]
+          bg-white/8
           blur-[100px]
         "
       />
@@ -173,17 +152,13 @@ export default function CtaBand() {
           absolute
           -bottom-40
           left-[30%]
-          h-[360px]
-          w-[360px]
+          h-90
+          w-90
           rounded-full
-          bg-black/[0.10]
+          bg-black/10
           blur-[100px]
         "
       />
-
-      {/* =========================================
-          CONTEÚDO
-          ========================================= */}
 
       <div
         className="
@@ -191,11 +166,13 @@ export default function CtaBand() {
           z-10
           mx-auto
           flex
-          max-w-[1180px]
-          flex-wrap
-          items-center
+          max-w-295
+          flex-col
+          items-start
           justify-between
           gap-8
+          sm:flex-row
+          sm:items-center
         "
       >
         <div>
@@ -215,7 +192,7 @@ export default function CtaBand() {
           <h2
             className="
               max-w-[20ch]
-              text-[26px]
+              text-[24px]
               font-normal
               leading-[1.1]
               sm:text-[34px]
@@ -225,7 +202,11 @@ export default function CtaBand() {
           </h2>
         </div>
 
-        <Button href={whatsappLink()} variant="light">
+        <Button
+          href={whatsappLink()}
+          variant="light"
+          className="w-full justify-center sm:w-auto"
+        >
           Falar no WhatsApp
         </Button>
       </div>

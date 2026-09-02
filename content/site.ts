@@ -2,11 +2,11 @@
 export const site = {
   nome: "VS Pinturas",
   slogan: "Reformas · Pinturas · Manutenções",
-  whatsapp: "5534900000000", // TODO: número real, formato 55DDDNUMERO
+  whatsapp: "+553496588193",
   whatsappMensagem: "Olá! Vim pelo site e gostaria de um orçamento.",
-  instagram: "https://instagram.com/vspinturas", // TODO: link real
-  cidade: "Uberlândia, MG", // TODO: confirmar cidade de atuação
-  email: "contato@vspinturas.com.br", // TODO: e-mail real
+  instagram: "https://instagram.com/vspinturas",
+  cidade: "Uberlândia, MG",
+  email: "contato@vspinturas.com.br",
 };
 
 export function whatsappLink(mensagem?: string) {

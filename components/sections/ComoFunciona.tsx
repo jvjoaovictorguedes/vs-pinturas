@@ -27,23 +27,26 @@ const etapas = [
 
 export default function ComoFunciona() {
   return (
-    <section className="bg-paper px-5 py-24 sm:px-10">
-      <div className="mx-auto max-w-[1180px]">
+    <section className="bg-paper px-4 py-20 sm:px-10 sm:py-24 dark:bg-paper">
+      <div className="mx-auto max-w-295">
         <div className="eyebrow mb-4">Como funciona</div>
-        <h2 className="mb-14 max-w-[20ch] text-[28px] font-normal text-ink sm:text-[38px]">
+        <h2 className="mb-10 max-w-[20ch] text-[28px] font-normal text-ink sm:mb-14 sm:text-[38px] dark:text-ink">
           Do orçamento à entrega, sem imprevisto
         </h2>
 
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {etapas.map((etapa) => (
-            <div key={etapa.numero} className="relative">
-              <span className="font-display text-5xl text-brand-red/25">
+            <div
+              key={etapa.numero}
+              className="relative rounded-2xl border border-line/60 bg-paper p-5 sm:p-0 sm:border-0 sm:bg-transparent"
+            >
+              <span className="font-display text-5xl text-brand-red/25 dark:text-brand-red/60">
                 {etapa.numero}
               </span>
-              <h3 className="mt-4 font-display text-lg text-ink">
+              <h3 className="mt-4 font-display text-lg text-ink dark:text-ink">
                 {etapa.titulo}
               </h3>
-              <p className="mt-3 text-sm font-light leading-relaxed text-ink-soft">
+              <p className="mt-3 text-sm font-light leading-relaxed text-ink-soft dark:text-ink/60">
                 {etapa.descricao}
               </p>
             </div>
