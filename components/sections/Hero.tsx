@@ -42,7 +42,8 @@ export default function Hero() {
     inset-0
     h-full
     w-full
-    object-contain
+    object-cover
+    sm:object-contain
     object-center
     dark:hidden
   "
