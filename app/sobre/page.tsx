@@ -30,14 +30,35 @@ export default function SobrePage() {
             />
             <div className="flex-1">
               <p className="text-lg font-light leading-relaxed text-ink-soft">
-                A VS Pinturas nasceu da vontade de fazer o trabalho de reforma e
-                pintura do jeito que o cliente merece: com prazo cumprido,
-                comunicação clara e um acabamento que realmente impressiona.
+                Minha história na construção civil começou cedo. Aos 12 anos
+                de idade, comecei a trabalhar na área junto com meu pai e meu
+                tio. Foi ali que aprendi, na prática, o valor do trabalho, da
+                responsabilidade e de fazer um serviço bem feito.
               </p>
               <p className="mt-6 text-lg font-light leading-relaxed text-ink-soft">
-                Atuamos em residências e comércios, do reparo pontual à reforma
-                completa, sempre com a mesma atenção ao detalhe que faz a
-                diferença entre um serviço comum e um trabalho bem feito.
+                Ao longo dos anos, continuei trabalhando na construção e só
+                parei por um período para servir ao Exército. Assim que saí,
+                voltei para aquilo que sempre fez parte da minha vida e, em 7
+                de julho de 2022, dei mais um passo importante: abri
+                oficialmente meu CNPJ e comecei a construir minha própria
+                empresa.
+              </p>
+              <p className="mt-6 text-lg font-light leading-relaxed text-ink-soft">
+                Desde então, nunca mais parei. Venho trabalhando todos os
+                dias para conquistar novos clientes, mas principalmente para
+                manter aqueles que já confiaram no meu trabalho. Para mim, a
+                satisfação de um cliente e a qualidade do serviço vêm sempre
+                em primeiro lugar.
+              </p>
+              <p className="mt-6 text-lg font-light leading-relaxed text-ink-soft">
+                A V.S. Pinturas nasceu de muitos anos de experiência,
+                trabalho e dedicação. E sigo até hoje com o mesmo propósito
+                de quando comecei: trabalhar com honestidade, entregar um
+                serviço bem feito e conquistar cada vez mais a confiança dos
+                meus clientes.
+              </p>
+              <p className="mt-6 text-lg font-light leading-relaxed text-ink-soft">
+                Essa é a nossa história. E ainda estamos só começando.
               </p>
             </div>
           </div>
