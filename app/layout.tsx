@@ -23,7 +23,7 @@ const description =
   "Reformas, pinturas e manutenções com acabamento profissional. Solicite seu orçamento pelo WhatsApp.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL ?? "https://vs-pinturas.vercel.app"),
+  metadataBase: new URL(process.env.SITE_URL ?? "https://www.vspinturas.com.br"),
   title,
   description,
   openGraph: {
