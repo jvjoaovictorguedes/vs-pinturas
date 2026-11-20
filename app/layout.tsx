@@ -18,10 +18,23 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
+const title = "VS Pinturas | Reformas, Pinturas e Manutenções";
+const description =
+  "Reformas, pinturas e manutenções com acabamento profissional. Solicite seu orçamento pelo WhatsApp.";
+const productionHost =
+  process.env.VERCEL_PROJECT_PRODUCTION_URL ?? "vs-pinturas.vercel.app";
+
 export const metadata: Metadata = {
-  title: "VS Pinturas | Reformas, Pinturas e Manutenções",
-  description:
-    "Reformas, pinturas e manutenções com acabamento profissional. Solicite seu orçamento pelo WhatsApp.",
+  metadataBase: new URL(process.env.SITE_URL ?? `https://${productionHost}`),
+  title,
+  description,
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    siteName: "VS Pinturas",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({
