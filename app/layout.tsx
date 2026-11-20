@@ -21,11 +21,9 @@ const manrope = Manrope({
 const title = "VS Pinturas | Reformas, Pinturas e Manutenções";
 const description =
   "Reformas, pinturas e manutenções com acabamento profissional. Solicite seu orçamento pelo WhatsApp.";
-const productionHost =
-  process.env.VERCEL_PROJECT_PRODUCTION_URL ?? "vs-pinturas.vercel.app";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL ?? `https://${productionHost}`),
+  metadataBase: new URL(process.env.SITE_URL ?? "https://vs-pinturas.vercel.app"),
   title,
   description,
   openGraph: {
